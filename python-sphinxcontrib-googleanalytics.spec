@@ -39,3 +39,10 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %defattr(-,root,root)
 %doc README
 %py_sitedir/sphinxcontrib*
+
+
+%changelog
+* Tue Jul 10 2012 Lev Givon <lev@mandriva.org> 0.1-1
++ Revision: 808758
+- imported package python-sphinxcontrib-googleanalytics
+
