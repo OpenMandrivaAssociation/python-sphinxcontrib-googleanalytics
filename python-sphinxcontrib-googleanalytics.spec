@@ -1,22 +1,13 @@
 %define module	sphinxcontrib-googleanalytics
-%define name	python-%{module}
-%define version	0.1
-%define	rel		1
-%if %mdkversion < 201100
-%define release %mkrel %{rel}
-%else
-%define	release	%{rel}
-%endif
 
 Summary:	Sphinx extension for Google Analytics HTML files
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://pypi.python.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz
+Name:		python-%{module}
+Version:	0.1
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://pypi.python.org/pypi/sphinxcontrib-googleanalytics/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Url:		https://pypi.org/project/sphinxcontrib-googleanalytics/
 BuildArch:	noarch
 Requires:	python-sphinx >= 0.6
 BuildRequires:	python-setuptools
@@ -32,17 +23,7 @@ Analytics web service.
 %__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
 %defattr(-,root,root)
 %doc README
 %py_sitedir/sphinxcontrib*
-
-
-%changelog
-* Tue Jul 10 2012 Lev Givon <lev@mandriva.org> 0.1-1
-+ Revision: 808758
-- imported package python-sphinxcontrib-googleanalytics
-
