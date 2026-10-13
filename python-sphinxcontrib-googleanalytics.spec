@@ -4,7 +4,7 @@
 Name:		python-sphinxcontrib-googleanalytics
 Summary:	Sphinx extension for Google Analytics
 Version:	0.5
-Release:	1
+Release:	2
 License:	BSD-3-Clause
 Group:		Development/Python
 URL:		https://github.com/sphinx-contrib/googleanalytics
